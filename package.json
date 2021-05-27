@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "circle-publish": "lerna run circle-publish",
+    "publish": "lerna run publish",
     "lint": "lerna run --no-bail lint",
     "test": "lerna run --no-bail test",
     "verify": "lerna run verify"
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:palantir/conjure-typescript-runtime.git"
+    "url": "git@github.com:munkyshi/conjure-typescript-runtime.git"
   },
   "author": "Palantir Technologies, Inc",
   "license": "Apache-2.0"

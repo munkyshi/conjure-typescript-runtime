@@ -163,7 +163,7 @@ export class FetchBridge implements IHttpApiBridge {
         });
 
         const fetchRequestInit: RequestInit = {
-            credentials: "same-origin",
+            credentials: "include",
             headers: stringifiedHeaders,
             method,
         };

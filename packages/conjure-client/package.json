@@ -1,13 +1,13 @@
 {
-  "name": "conjure-client",
+  "name": "@munkyshi/conjure-client",
   "version": "0.0.0",
-  "description": "An HTTP bridge library for use in front end applications and generated conjure code",
+  "description": "An HTTP bridge library for use in front end applications and generated conjure code. Forked from palantir/conjure-typescript-runtime",
   "sideEffects": false,
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "build": "npm-run-all clean lint compile test",
-    "circle-publish": "./scripts/circle-publish-npm",
+    "publish": "./scripts/publish-npm",
     "clean": "rm -rf lib/*",
     "precompile": "./scripts/generate-library-version.sh",
     "compile": "tsc -p ./src",
@@ -16,7 +16,7 @@
     "generateSpecBindings": "./scripts/generate-test-bindings.sh",
     "lint": "tslint 'src/**/*.ts*' --project ./src/tsconfig.json",
     "lint-fix": "lint --fix",
-    "test": "yarn downloadConjureTypeScript && yarn downloadTestServer && yarn generateSpecBindings && npm-run-all test:unit test:integration",
+    "test": "yarn downloadConjureTypeScript && yarn downloadTestServer && yarn generateSpecBindings && npm-run-all test:unit",
     "test:integration": "./scripts/run-integration-tests.sh",
     "test:unit": "jest --config ./jest.config.js --rootDir ./",
     "verify": "npm-run-all -p test lint"
@@ -47,13 +47,16 @@
     "typescript": "~3.2.0",
     "whatwg-fetch": "^3.0.0"
   },
-  "author": "Palantir Technologies, Inc.",
+  "author": "munkyshi",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:palantir/conjure-typescript-runtime.git"
+    "url": "git@github.com:munkyshi/conjure-typescript-runtime.git"
   },
   "dependencies": {
     "web-streams-polyfill": "^2.0.6"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }

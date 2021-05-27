@@ -126,7 +126,7 @@ describe("RetryingFetch", () => {
 
 function createFetchRequest(method: string, data?: any, contentType = "application/json", headers = {}): RequestInit {
     const request: RequestInit = {
-        credentials: "same-origin",
+        credentials: "include",
         headers: {
             ...headers,
             Authorization: `Bearer ${token}`,
