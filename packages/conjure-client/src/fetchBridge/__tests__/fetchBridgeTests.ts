@@ -480,7 +480,7 @@ function createFetchRequest(opts: ICreateFetchRequestOpts): RequestInit {
     const contentType = opts.contentType || MediaType.APPLICATION_JSON;
     const headers = opts.headers || {};
     const request: RequestInit = {
-        credentials: "same-origin",
+        credentials: "include",
         headers: {
             ...headers,
             Authorization: `Bearer ${token}`,
