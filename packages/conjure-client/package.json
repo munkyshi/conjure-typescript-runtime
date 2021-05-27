@@ -7,7 +7,7 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "build": "npm-run-all clean lint compile test",
-    "circle-publish": "./scripts/circle-publish-npm",
+    "publish": "./scripts/publish-npm",
     "clean": "rm -rf lib/*",
     "precompile": "./scripts/generate-library-version.sh",
     "compile": "tsc -p ./src",
@@ -55,5 +55,8 @@
   },
   "dependencies": {
     "web-streams-polyfill": "^2.0.6"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }
